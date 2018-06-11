@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">SunKnights</string>
+    <string name="Open">NavBar</string>
+    <string name="Close">NavBar</string>
+    <string name="Home">Home</string>
+    <string name="Start">Begin</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="AdUID">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="Email">Email</string>
+    <string name="UN">Username</string>
+    <string name="End">Sign In</string>
+    <string name="Register">Register</string>
+    <string name="title_activity_home_screen">Home</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="not_signedIn">Guest</string>
+    <string name="Not_Verified_UN">You are do not have a verified email!</string>
+    <string name="Not_Verified_ET">I see that your email is not verified, be sure it verify it!</string>
+    <string name="Not_Verified">Email is not verified (probably) please verify it through settings or an automatic email sent to you!</string>
+    <string name="example_example_com">Email</string>
+    <string name="password">Password</string>
+    <string name="not_signed_in">Signed Out</string>
+    <string name="Howdy">Welcome!</string>
+    <string name="emailstatus">You email is %1$s. Is it verified: %2$b</string>
+    <string name="userstatus">Welcome, %s!</string>
+</resources>
