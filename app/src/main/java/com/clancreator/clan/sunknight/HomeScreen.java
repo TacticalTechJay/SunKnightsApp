@@ -83,6 +83,7 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
             email.setText(R.string.not_signed_in);
             TextView username = findViewById(R.id.Username);
             username.setText(null);
+            Toast.makeText(this, "Looks like you are signed out!", Toast.LENGTH_SHORT).show();
         }
     }
 
