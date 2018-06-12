@@ -1,5 +1,6 @@
 package com.clancreator.clan.sunknight;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -10,26 +11,33 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
-public class HomeScreen extends AppCompatActivity {
+public class HomeScreen extends AppCompatActivity implements View.OnClickListener {
 
-    private FirebaseAnalytics mFirebaseAnalytics;
     private FirebaseAuth mAuth;
     private DrawerLayout mDrawerLayout;
+    private TextView mDisplayName;
+    private TextView mEmailView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        FirebaseAnalytics mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         mAuth = FirebaseAuth.getInstance();
 
         mDrawerLayout = findViewById(R.id.dl);
+
+        mEmailView = findViewById(R.id.EmailText);
+        mDisplayName = findViewById(R.id.Username);
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
@@ -57,6 +65,34 @@ public class HomeScreen extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        FirebaseUser user = mAuth.getCurrentUser();
+        updateUI(user);
+    }
+
+    private void updateUI(final FirebaseUser user) {
+        if (user != null) {
+            mDisplayName.setText(getString(R.string.userstatus, user.getDisplayName()));
+            mEmailView.setText(getString(R.string.emailstatus, user.getEmail(), user.isEmailVerified()));
+        } else {
+            TextView email = findViewById(R.id.EmailText);
+            email.setText(R.string.not_signed_in);
+            TextView username = findViewById(R.id.Username);
+            username.setText(null);
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        int i = v.getId();
+        if (i == R.id.action_signin) {
+            Intent intent = new Intent(HomeScreen.this, LoginActivity.class);
+            startActivity(intent);
+        }
     }
 
 /*

@@ -17,19 +17,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:theme="@style/Theme.AppCompat.Light"
         tools:targetApi="donut">
         <activity
             android:name=".HomeScreen"
-            android:theme="@style/AppTheme">
+            android:theme="@style/Theme.AppCompat.Light">
 
-            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-            -->
         </activity>
 
         <meta-data
@@ -38,21 +36,14 @@
 
         <activity android:name=".LoginActivity"
             android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <!--
                 <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.clancreator.clan.sunknight.HomeScreen" />
-            -->
         </activity>
         <activity android:name=".RegisterActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.clancreator.clan.sunknight.RegisterActivity" />
+                android:value="com.clancreator.clan.sunknight.LoginActivity" />
         </activity>
     </application>
 
