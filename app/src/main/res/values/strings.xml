@@ -27,4 +27,5 @@
     <string name="Howdy">Welcome!</string>
     <string name="emailstatus">You email is %1$s. Is it verified: %2$b</string>
     <string name="userstatus">Welcome, %s!</string>
+    <string name="sign_in">Sign In</string>
 </resources>
