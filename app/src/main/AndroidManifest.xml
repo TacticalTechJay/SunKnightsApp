@@ -17,11 +17,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light"
+        android:theme="@style/SK_Theme"
         tools:targetApi="donut">
+
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
         <activity
             android:name=".HomeScreen"
-            android:theme="@style/Theme.AppCompat.Light">
+            android:theme="@style/SK_Theme">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,17 +38,15 @@
             </intent-filter>
         </activity>
 
-        <meta-data
-            android:name="com.google.android.gms.wallet.api.enabled"
-            android:value="true" />
-
         <activity android:name=".LoginActivity"
-            android:theme="@style/AppTheme">
+            android:theme="@style/SK_Theme">
                 <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.clancreator.clan.sunknight.HomeScreen" />
         </activity>
-        <activity android:name=".RegisterActivity">
+
+        <activity android:name=".RegisterActivity"
+            android:theme="@style/SK_Theme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.clancreator.clan.sunknight.LoginActivity" />

@@ -5,7 +5,9 @@
     android:id="@+id/dl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:fitsSystemWindows="true"
+    android:theme="@style/SK_Theme"
     tools:openDrawer="start">
 
     <FrameLayout

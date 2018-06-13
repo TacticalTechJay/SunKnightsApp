@@ -21,11 +21,12 @@
     <string name="Not_Verified_UN">You are do not have a verified email!</string>
     <string name="Not_Verified_ET">I see that your email is not verified, be sure it verify it!</string>
     <string name="Not_Verified">Email is not verified (probably) please verify it through settings or an automatic email sent to you!</string>
-    <string name="example_example_com">Email</string>
+    <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="not_signed_in">Signed Out</string>
     <string name="Howdy">Welcome!</string>
     <string name="emailstatus">You email is %1$s. Is it verified: %2$b</string>
     <string name="userstatus">Welcome, %s!</string>
     <string name="sign_in">Sign In</string>
+    <string name="meh">OR</string>
 </resources>

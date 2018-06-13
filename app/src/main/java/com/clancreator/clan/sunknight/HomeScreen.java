@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -78,12 +79,16 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         if (user != null) {
             mDisplayName.setText(getString(R.string.userstatus, user.getDisplayName()));
             mEmailView.setText(getString(R.string.emailstatus, user.getEmail(), user.isEmailVerified()));
+            Button mSignInButton = findViewById(R.id.action_signin);
+            mSignInButton.setVisibility(View.GONE);
         } else {
             TextView email = findViewById(R.id.EmailText);
             email.setText(R.string.not_signed_in);
             TextView username = findViewById(R.id.Username);
             username.setText(null);
             Toast.makeText(this, "Looks like you are signed out!", Toast.LENGTH_SHORT).show();
+            Button mSignInButton = findViewById(R.id.action_signin);
+            mSignInButton.setVisibility(View.VISIBLE);
         }
     }
 
